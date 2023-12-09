@@ -1,0 +1,50 @@
+C:\Users\lenovo>cd desktop
+
+C:\Users\lenovo\Desktop>mkdir
+The syntax of the command is incorrect.
+
+C:\Users\lenovo\Desktop>mkdir project1
+
+C:\Users\lenovo\Desktop>cd project1
+
+C:\Users\lenovo\Desktop\project1>python -m venv env
+
+C:\Users\lenovo\Desktop\project1>cd env
+
+C:\Users\lenovo\Desktop\project1\env>python -m django startproject cs
+
+C:\Users\lenovo\Desktop\project1\env>cd cs
+
+C:\Users\lenovo\Desktop\project1\env\cs>python -m django startapp school
+
+C:\Users\lenovo\Desktop\project1\env\cs>code .
+
+C:\Users\lenovo\Desktop\project1\env\cs>python manage.py runserver
+
+setting . me
+INSTALLED_APPS ++
+
+project ka urls me..
+from django.contrib import admin
+from django.urls import path,include 
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('',include('school.urls')),
+]
+app me jake urls.py ka file bana.
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('hello/',views.school),
+]
+views.py app me
+from django.shortcuts import render
+from django.http import HttpResponse
+def school(request):
+    return HttpResponse('hello i am  ja world')
+# Create your views here.
+ 
+teriminal me 
+run 
+
